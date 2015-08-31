@@ -1,0 +1,44 @@
+<!DOCTYPE html>{% load i18n %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+<style type="text/css">
+.sukunimi, .etunimi {background-color: #ddddff}
+.nimisana {background-color: #ddffdd}
+.teonsana {background-color: #ffdddd}
+.laatusana {background-color: #ddffff}
+.paikannimi {background-color: #ddffff}
+.seikkasana {background-color: #ddffff}
+.nimi {background-color: #ddffff}
+.sidesana {background-color: #cccccc}
+</style>
+</head>
+<body>
+<form method="post" action="">
+{{ textform }} {% csrf_token %}
+<button type="submit">Analyze</button>
+</form>
+<table>
+<tr>
+ <th>{% trans "Original" %}</th>
+ <th>{% trans "Base form" %}</th>
+ <th>{% trans "Class" %}</th>
+</tr>
+{% for w in analyzed %}
+<tr>
+ <td>{{ w.original }}</td>
+ <td>{{ w.BASEFORM }}</td>
+ <td class="{{ w.CLASS }}">{{ w.CLASS }}</td>
+ <td>{{ w.NUMBER }}</td>
+ <td>{{ w.STRUCTURE }}</td>
+ <td>{{ w.WORDBASES }}</td>
+ <td>{{ w.POSSIBLE_GEOGRAPHICAL_NAME }}</td>
+ <td>{{ w.WORDIDS }}</td>
+ <td>{{ w.ulkoolento }}</td>
+</tr>
+{% endfor  %}
+</table>
+
+</body>
+</html>
