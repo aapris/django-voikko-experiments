@@ -24,6 +24,11 @@
  <th>{% trans "Original" %}</th>
  <th>{% trans "Base form" %}</th>
  <th>{% trans "Class" %}</th>
+ <th>{% trans "Number" %}</th>
+ <th>{% trans "Word bases" %}</th>
+ <th>{% trans "Word ids" %}</th>
+ <th>{% trans "Geographical name?" %}</th>
+ <th>{% trans "Structure" %}</th>
 </tr>
 {% for w in analyzed %}
 <tr>
@@ -31,11 +36,10 @@
  <td>{{ w.BASEFORM }}</td>
  <td class="{{ w.CLASS }}">{{ w.CLASS }}</td>
  <td>{{ w.NUMBER }}</td>
- <td>{{ w.STRUCTURE }}</td>
  <td>{{ w.WORDBASES }}</td>
- <td>{{ w.POSSIBLE_GEOGRAPHICAL_NAME }}</td>
  <td>{{ w.WORDIDS }}</td>
- <td>{{ w.ulkoolento }}</td>
+ <td>{{ w.POSSIBLE_GEOGRAPHICAL_NAME }}</td>
+ <td>{{ w.STRUCTURE }}</td>
 </tr>
 {% endfor  %}
 </table>
