@@ -45,8 +45,8 @@ def voikko_analyze(text):
                 #     base = f['BASEFORM']
                 #     print(u'{:<30} {:<30} {} -- {}'.format(base, word, i, f['CLASS']))
                 base = f['BASEFORM']
-                print(u'{:<30} {:<30} {} -- {}'.format(base, word, i, f['CLASS']))
-                print(f)
+                # print(u'{:<30} {:<30} {} -- {}'.format(base, word, i, f['CLASS']))
+                # print(f)
         else:
             analyzed.append({'BASEFORM': word, 'found': False, 'original': word})
             base = word
