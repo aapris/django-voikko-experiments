@@ -12,6 +12,8 @@
 .seikkasana {background-color: #ddffff}
 .nimi {background-color: #ddffff}
 .sidesana {background-color: #cccccc}
+th {border:1px solid #bbb;}
+td {border:1px solid #ddd;}
 </style>
 </head>
 <body>
@@ -23,17 +25,25 @@
 <tr>
  <th>{% trans "Original" %}</th>
  <th>{% trans "Base form" %}</th>
+ <th>{% trans "Wordbase list" %}</th>
  <th>{% trans "Class" %}</th>
+ <th>{% trans "Geo Name" %}</th>
+ <th>{% trans "Number" %}</th>
+ <th>{% trans "Wordbases" %}</th>
+ <th>{% trans "Structure" %}</th>
+ <th>{% trans "Word IDs" %}</th>
+ <th>{% trans "Ulkoolento" %}</th>
 </tr>
 {% for w in analyzed %}
 <tr>
  <td>{{ w.original }}</td>
  <td>{{ w.BASEFORM }}</td>
+ <td>{{ w.wordbase_list|join:', ' }}</td>
  <td class="{{ w.CLASS }}">{{ w.CLASS }}</td>
- <td>{{ w.NUMBER }}</td>
- <td>{{ w.STRUCTURE }}</td>
- <td>{{ w.WORDBASES }}</td>
  <td>{{ w.POSSIBLE_GEOGRAPHICAL_NAME }}</td>
+ <td>{{ w.NUMBER }}</td>
+ <td>{{ w.WORDBASES }}</td>
+ <td>{{ w.STRUCTURE }}</td>
  <td>{{ w.WORDIDS }}</td>
  <td>{{ w.ulkoolento }}</td>
 </tr>
