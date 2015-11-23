@@ -30,7 +30,7 @@ def voikko_analyze(text):
             for f in aword:
                 f['found'] = True
                 f['original'] = word
-                wordbases = RE_FIND_COMPOUNDS.findall(f['WORDBASES'])
+                wordbases = RE_FIND_COMPOUNDS.findall(f.get('WORDBASES', ''))
                 f['wordbase_list'] = [x for x in wordbases if not x.startswith('+')]
                 # print(f['WORDBASES'], RE_FIND_COMPOUNDS.findall(f['WORDBASES']))
                 analyzed.append(f)
