@@ -12,11 +12,19 @@
 .seikkasana {background-color: #ddffff}
 .nimi {background-color: #ddffff}
 .sidesana {background-color: #cccccc}
+body {font-family: sans-serif}
 th {border:1px solid #bbb;}
 td {border:1px solid #ddd;}
+p {width: 80ex;}
 </style>
 </head>
 <body>
+<p>
+Kirjoita tai kopioi suomenkielistä tekstiä oheiseen tekstilaatikkoon ja lähetä lomake.
+Palvelimella oleva sovellus poistaa tekstistä ei-kirjaimet ja syöttää
+sanat yksi kerrallaan Voikko-kirjastolle (libvoikko) analysoitavaksi.
+Analyysin tulos näytetään taulukossa.
+</p>
 <form method="post" action="">
 {{ textform }} {% csrf_token %}
 <button type="submit">Analyze</button>
