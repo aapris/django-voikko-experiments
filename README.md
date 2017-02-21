@@ -3,20 +3,18 @@
 Install libvoikko
 =================
 
-Mac Os X
---------
+macOS
+-----
 
-You need Home Brew.
+Requires Homebrew.
 
 ```
 brew install libvoikko
-wget http://www.puimula.org/htp/testing/voikko-snapshot/dict-morphoid.zip
+wget http://www.puimula.org/htp/testing/voikko-snapshot-v5/dict-morphoid.zip
+# if you have libvoikko < 4, use this:
+# wget http://www.puimula.org/htp/testing/voikko-snapshot/dict-morphoid.zip
 
-# Install dictionaries globally available:
-sudo mkdir /etc/voikko
-sudo unzip -d /etc/voikko/ dict-morphoid.zip
-
-# Install to home directory
+# Install dictionaries to home directory
 mkdir ~/.voikko
 unzip -d ~/.voikko/ dict-morphoid.zip
 ```
