@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import re
-from .libvoikko import Voikko
+from libvoikko import Voikko
 
-v = Voikko(u'fi-x-morphoid')
+# v = Voikko(u'fi-x-morphoid')
+v = Voikko(u'fi')
+
 # Replace all non letter characters with space
 RE_WS_REPLACE = re.compile("[^\w]", re.UNICODE)
 RE_FIND_COMPOUNDS = re.compile(r'\(([\w\+]+)\)', re.UNICODE)
@@ -25,9 +27,11 @@ def voikko_analyze(text):
     analyzed = []
     for word in words:
         aword = v.analyze(word)
-        # i = 0
         if aword:
+            i = 0
             for f in aword:
+                i += 1
+                print(i, f)
                 f['found'] = True
                 f['original'] = word
                 wordbases = RE_FIND_COMPOUNDS.findall(f.get('WORDBASES', ''))
@@ -61,5 +65,5 @@ def baseform_text(text):
 
 if __name__ == '__main__':
     import sys
-    words = [unicode(x, 'utf8') for x in sys.argv[1:]]
-    print(baseform_text(u' '.join(words)))
+    words = sys.argv[1:]
+    print(baseform_text(' '.join(words)))
