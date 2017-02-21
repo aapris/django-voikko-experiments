@@ -17,6 +17,8 @@ def index(request):
         tf = TextForm(request.POST)
         if tf.is_valid():
             a = voikko_analyze(tf.cleaned_data.get('text'))
+            # for b in a:
+            #     print(b)
     else:
         tf = TextForm()
     return render_to_response(
