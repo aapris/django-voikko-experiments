@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 import re
-from libvoikko import Voikko
+from .libvoikko import Voikko
 
 # v = Voikko(u'fi-x-morphoid')
 v = Voikko(u'fi')
