@@ -10,6 +10,8 @@ services:
       - ./services/django_server/:/home/app/
     ports:
       - 8000:8000
+    volumes:
+      - ./services/django_server/db:/home/app/db
 #    expose:
 #      - 8000
     logging:

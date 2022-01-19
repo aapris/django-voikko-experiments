@@ -40,7 +40,7 @@ COPY --chown=app:app . $HOME/
 
 USER app
 
-EXPOSE 8000/tcp
+#EXPOSE 8000/tcp
 
 
 # ==============================
@@ -54,4 +54,4 @@ COPY --chown=app:app . $HOME/
 
 USER app
 
-EXPOSE 8000/tcp
+#EXPOSE 8000/tcp
