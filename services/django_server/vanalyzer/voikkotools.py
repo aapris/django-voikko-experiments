@@ -6,8 +6,8 @@ from libvoikko import Voikko
 v = Voikko("fi")
 
 # Replace all non letter characters with space
-RE_WS_REPLACE = re.compile("[^\w]", re.UNICODE)
-RE_FIND_COMPOUNDS = re.compile(r"\(([\w\+]+)\)", re.UNICODE)
+RE_WS_REPLACE = re.compile(r"[^\w]", re.UNICODE)
+RE_FIND_COMPOUNDS = re.compile(r"\(([\w+]+)\)", re.UNICODE)
 
 
 def voikko_analyze(text):
@@ -25,7 +25,6 @@ def voikko_analyze(text):
             i = 0
             for f in aword:
                 i += 1
-                print(i, f)
                 f["found"] = True
                 f["original"] = word
                 wordbases = RE_FIND_COMPOUNDS.findall(f.get("WORDBASES", ""))
