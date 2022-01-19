@@ -1,0 +1,7 @@
+version: "3.8"
+
+services:
+  django:
+    environment:
+      DJANGO_SECRET_KEY: auerydgfbjhvadlfbgvalsdjfgasblvdfjvbgadjlsf
+
