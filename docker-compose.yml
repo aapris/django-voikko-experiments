@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  django:
+    build:
+      context: ./services/django_server
+      target: development
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./services/django_server/:/home/app/
+    ports:
+      - 8000:8000
+#    expose:
+#      - 8000
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "10"
+        max-size: "20m"
+    container_name: voikko-django-experiment

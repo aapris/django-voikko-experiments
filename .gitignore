@@ -1,6 +1,7 @@
 .idea
 db.sqlite3
 local_settings.py
+venv
 
 
 # Byte-compiled / optimized / DLL files
