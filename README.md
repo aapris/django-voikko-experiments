@@ -20,6 +20,8 @@ python3 -m venv venv
 source venv/bin/activate
 cd services/django_server/
 pip install -r  requirements.txt -r requirements-dev.txt
+# You may need to symlink libvoikko.1.dylib, e.g.:
+ln -s /opt/homebrew/Cellar/libvoikko/4.3.1/lib/libvoikko.1.dylib
 python manage.py runserver
 ```
 
