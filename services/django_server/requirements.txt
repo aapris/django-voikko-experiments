@@ -4,16 +4,21 @@
 #
 #    pip-compile
 #
-asgiref==3.6.0
+asgiref==3.8.1
     # via django
-django==4.2
-    # via -r requirements.in
-gunicorn==20.1.0
-    # via -r requirements.in
+django==4.2.15
+    # via django-voikko-experiments (pyproject.toml)
+django-environ==0.11.2
+    # via django-voikko-experiments (pyproject.toml)
+gunicorn==23.0.0
+    # via django-voikko-experiments (pyproject.toml)
 libvoikko==4.3
-    # via -r requirements.in
-sqlparse==0.4.4
+    # via django-voikko-experiments (pyproject.toml)
+packaging==24.1
+    # via gunicorn
+psycopg2-binary==2.9.9
+    # via django-voikko-experiments (pyproject.toml)
+sqlparse==0.5.1
     # via django
-
-# The following packages are considered to be unsafe in a requirements file:
-# setuptools
+unidecode==1.3.8
+    # via django-voikko-experiments (pyproject.toml)
