@@ -7,18 +7,12 @@
 asgiref==3.8.1
     # via django
 django==4.2.15
-    # via django-voikko-experiments (pyproject.toml)
-django-environ==0.11.2
-    # via django-voikko-experiments (pyproject.toml)
-gunicorn==23.0.0
-    # via django-voikko-experiments (pyproject.toml)
+    # via -r requirements.in
+gunicorn==22.0.0
+    # via -r requirements.in
 libvoikko==4.3
-    # via django-voikko-experiments (pyproject.toml)
+    # via -r requirements.in
 packaging==24.1
     # via gunicorn
-psycopg2-binary==2.9.9
-    # via django-voikko-experiments (pyproject.toml)
 sqlparse==0.5.1
     # via django
-unidecode==1.3.8
-    # via django-voikko-experiments (pyproject.toml)
