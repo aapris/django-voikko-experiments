@@ -1,5 +1,9 @@
 # django-voikko-experiments
 
+ARCHIVED
+========
+This is obsolete and archived 2026-10-27
+
 Install libvoikko
 =================
 
